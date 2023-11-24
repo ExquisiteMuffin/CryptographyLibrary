@@ -1,5 +1,5 @@
 #include "include/SymmetricKeyAlgorithms.hpp"
-#include <string>
+#include "tools/tools.h"
 
 SymmetricKeyAlgorithm::SymmetricKeyAlgorithm() 
 {
@@ -9,18 +9,18 @@ SymmetricKeyAlgorithm::SymmetricKeyAlgorithm()
 std::string SymmetricKeyAlgorithm::encrypt() //Returns the encrypted message
 {
     // Encryption
-    char *EncryptedMessage = "";
-    for (int i = 0; i < 5; i++) //ADJUST LOOP LATER
+    char EncryptedMessage[99];
+    int length = len_string(message);
+    for (int i = 0; i < length; i++)
     {
+        int temp;
         if (message[i] % 4 ==  0)
         {
-            int temp = message[i];
+            char final;
+            temp = message[i];
             temp /= 4;
             temp += 2;
-            if (temp % 2 == 0)
-            {
-                to_string()
-            }
+            final = int_to_str(temp);
         }
         else if (message[i]) //ADJUST LATER TO CHECK IF MESSAGE[i] IS PRIME
         {
