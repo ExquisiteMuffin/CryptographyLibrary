@@ -20,7 +20,7 @@ std::string SymmetricKeyAlgorithm::encrypt() //Returns the encrypted message
             temp = message[i];
             temp /= 4;
             temp += 2;
-            final = int_to_str(temp);
+            //final = int_to_str(temp);
         }
         else if (message[i]) //ADJUST LATER TO CHECK IF MESSAGE[i] IS PRIME
         {
